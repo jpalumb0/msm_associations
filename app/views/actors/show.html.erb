@@ -23,8 +23,8 @@
       <dt>Filmography</dt>
       <dd>
       <ul class="list-group">
-        <% @characters= Character.where(:actor_id => @actor.id) %>
-        <% @characters.each do |character| %>
+        <% characters= Character.where(:actor_id => @actor.id) %>
+        <% characters.each do |character| %>
           <li class="list-group-item"><%= Movie.find(character.movie_id).title %> (<%= character.name %>)</li>
         <% end %>
         <li class="list-group-item">
