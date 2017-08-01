@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: directors
+# Table name: actors
 #
 #  id         :integer          not null, primary key
 #  name       :string
@@ -11,6 +11,6 @@
 #  updated_at :datetime         not null
 #
 
-class Director < ApplicationRecord
+class Actor < ApplicationRecord
     validates :name, presence: true, uniqueness: {scope: :dob}
 end
