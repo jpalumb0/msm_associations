@@ -23,8 +23,8 @@
       <dt>Filmography</dt>
       <dd>
       <ul class="list-group">
-        <% characters= Character.where(:actor_id => @actor.id) %>
-        <% characters.each do |character| %>
+        <% @characters = Character.where(:actor_id => @actor.id) %>
+        <% @characters.each do |character| %>
           <li class="list-group-item"><%= Movie.find(character.movie_id).title %> (<%= character.name %>)</li>
         <% end %>
         <li class="list-group-item">
@@ -40,7 +40,7 @@
                 Movie
               </label>
       
-              <%= select_tag("movie_id", options_from_collection_for_select(Movie.all, :id, :title, @character.movie_id), :class => "form-control") %>
+              <%= select_tag("movie_id", options_from_collection_for_select(Movie.all, :id, :title), :class => "form-control") %>
               <a href="/actors/new">or add a new movie</a>
             </div>
       

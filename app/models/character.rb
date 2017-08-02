@@ -13,4 +13,7 @@
 class Character < ApplicationRecord
     validates :actor_id, presence: true
     validates :movie_id, presence: true
+    
+    belongs_to :movie
+    belongs_to :actor
 end
