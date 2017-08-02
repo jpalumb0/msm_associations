@@ -18,7 +18,7 @@
       <dd><%= @movie.description %></dd>
 
       <dt>Image url</dt>
-      <dd><%= @movie.image_url %></dd>
+      <dd><a href="<%= @movie.image_url %>"><image src="<%= @movie.image_url %>"></a></dd>
 
       <dt>Director</dt>
       <dd><%= Director.find(@movie.director_id).name %></dd>
